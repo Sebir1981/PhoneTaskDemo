@@ -46,4 +46,20 @@ public class PhoneNote {
 	public void setTag(TagType tag) {
 		this.tag = tag;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj.getClass() != PhoneNote.class) {
+			return false;
+		}
+		if(this == obj) {
+			return true;
+		}
+		PhoneNote other = (PhoneNote)obj;
+		if (this.id != other.id) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 }

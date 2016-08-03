@@ -1,5 +1,7 @@
 package by.itclass.daos;
 
+import java.util.Comparator;
+
 import by.itclass.common.PhoneNote;
 
 public interface IPhoneNotesDAO {
@@ -7,5 +9,9 @@ public interface IPhoneNotesDAO {
 	void Delete(PhoneNote note);
 	void Update(PhoneNote note);
 	
-	PhoneNote findByID(int id);
+	PhoneNote FindByID(int id);
+	
+	PhoneNote[] AllNotes();
+	
+	void Sort(Comparator<PhoneNote> comp);
 }
